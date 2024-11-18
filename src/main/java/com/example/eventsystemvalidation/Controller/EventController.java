@@ -76,7 +76,7 @@ public class EventController {
         return ResponseEntity.status(200).body(new ApiResponse("Event is updated"));
     }
 
-    @PutMapping("/update/{index}/{capacity}")
+    @PutMapping("/update-capacity/{index}/{capacity}")
     public ResponseEntity updateCapacity(@PathVariable int index ,@PathVariable int capacity){
         if(index >= events.size() || index < 0) return ResponseEntity.status(400).body(new ApiResponse("Event not found"));
 
